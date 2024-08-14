@@ -7,6 +7,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (req, res) => {
+    res.send('Hello World, from express');
+})
+
 app.post('/api/create-tinyurl', async (req, res) => {
         try {
                 let collection = await db.collection('tinyurls');
