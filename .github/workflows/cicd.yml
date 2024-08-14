@@ -27,4 +27,4 @@ jobs:
       - name: Delete old container
         run: docker rm -f tinyurl-container 
       - name: Run docker container
-        run: docker run -d -p 3001:3001 --name tinyurl-container -e MONGO_PASSWORD='${{ secrets.MONGODB_PASSWORD }}' joeyschen/tinyurl
+        run: docker run -d -p 3001:3002 --name tinyurl-container -e MONGO_PASSWORD='${{ secrets.MONGODB_PASSWORD }}' joeyschen/tinyurl
